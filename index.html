@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Student Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+<div id="cool">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</div>
+  <div id="login_div" class="main-div">
+  <div id="login">   
+   <h1>Login</h1>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button> </br> </br>
+	</div>
+	<div id="vertical"></div>
+	<div id="signup">
+	<h1>Signup</h1>
+	<input type="text" placeholder="Enter your name!" id="name" />
+	<input type="text" placeholder="Enter contact number" id="contact" />
+	<input type="text" placeholder="Enter Branch" id="branch" />
+	<input type="email" placeholder="Email..." id="email_field1" />
+    <input type="password" placeholder="Password..." id="password_field1" minlength="6" />
+	<button onclick="signup()">Signup</button> 
+	</div>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h2>Welcome User</h2></br>
+    <p id="user_para"></br><h3>Welcome to One4All web app.</br> You're currently logged in.</h3></p>
+    <button onclick="visit()">Click to cotinue</button> </br>
+	<button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCInSuZ86bMhThBLtgDMFNEbYorvUJGqWU",
+    authDomain: "data-new.firebaseapp.com",
+    databaseURL: "https://data-new.firebaseio.com",
+    projectId: "data-new",
+    storageBucket: "data-new.appspot.com",
+    messagingSenderId: "258517081352"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
